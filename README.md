@@ -1,31 +1,36 @@
-# Terraform Lab 1 - Apache AWS EC2
+## Description:
 
-**Presented to:**    
-_Sabreen Salama_    
-
-**Presented by:**   
-_Islam Khaled_    
-
-8 July 2023
+Install Apache on a private AWS instance within an internal network using Terraform. This is achieved by utilizing a Network Address Translator (NAT) and an Elastic IP assigned to the public bastion server that acts as a secure gateway to the internal network via SSH.
 
 -----------------------------------------
-![lab2](https://github.com/eslamkhaled560/terraform-bastion-server/assets/54172897/172ba1d3-a2f2-421e-8734-a81b60b7f39f)
+## Dependencies:
 
-### - Terraform Apply Output
+- Configure AWS locally by installing AWS CLI, and provide a programmatic IAM user with administrator permissions in the default profile.
+- Install Terraform, and add it to PATH.
 
-![1](https://github.com/eslamkhaled560/terraform-bastion-server/assets/54172897/f51c7164-b0d1-44dd-baf4-9c5912db77d6)
+-----------------------------------------
+## Getting Started:
 
-### - VPC Map
+- clone repository, and move to it.
+```
+git clone https://github.com/eslamkhaled560/terraform-aws-bastion-server.git
+cd terraform-aws-bastion-server
+```
 
-![image](https://github.com/eslamkhaled560/terraform-bastion-server/assets/54172897/fed37c60-c448-4efd-b5b1-2df887c507b1)
+- Start project, terraform install necessary dependencies
+```
+terraform init
+```
 
-### - Public Instance IP Access
+- Check what will be created 
+```
+terraform plan
+```
 
-![3](https://github.com/eslamkhaled560/terraform-bastion-server/assets/54172897/adc76ba8-dae2-424c-b4f9-02daf58062ec)
+- Create the AWS infrastructure
+```
+terraform apply               # type yes when prompts
+```
 
-
-### - Private Instance Logs
-
-![image](https://github.com/eslamkhaled560/terraform-bastion-server/assets/54172897/a4919d67-71d7-40d8-98b8-7675f0bfff70)
-
+- Created two instances with Apache installed on them, you can access it with the public IP address that appears as a terraform output
 -----------------------------------------
