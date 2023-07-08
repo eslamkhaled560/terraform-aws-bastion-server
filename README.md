@@ -32,7 +32,13 @@ terraform plan
 terraform apply               # type yes when prompts
 ```
 
+- Access public instance to view the default Apache page
+```
+http://public-instance-ip:80         #get (public-instance-ip) from terraform output
+```
+
 - Login to your AWS and view the changes in EC2 and VPC services
+- View private instance logs, or ssh to it from the bastion server to view Apache installation.
 
 - Don't forget to destroy everything when you finish
 ```
