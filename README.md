@@ -32,5 +32,10 @@ terraform plan
 terraform apply               # type yes when prompts
 ```
 
-- Created two instances with Apache installed on them, you can access it with the public IP address that appears as a terraform output
+- Login to your AWS and view the changes in EC2 and VPC services
+
+- Don't forget to destroy everything when you finish
+```
+terraform destroy
+```
 -----------------------------------------
